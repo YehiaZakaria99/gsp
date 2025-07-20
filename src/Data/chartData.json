@@ -1,0 +1,135 @@
+{
+  "headManagement": {
+    "name": "Mohammed Al Assmi",
+    "title": "CEO",
+    "children": [
+      {
+        "name": "Mutaeb Al Hajri",
+        "title": "Executive Director",
+        "children": [
+          {
+            "name": "Mohammed Sajid",
+            "title": "QC Manager"
+          },
+          {
+            "name": "Mohsin Raza",
+            "title": "HSE Manager"
+          },
+
+          {
+            "name": "Shahid Siddique",
+            "title": "Planning Manager"
+          },
+          {
+            "name": "Iftikhar Sikandar",
+            "title": "Operations Manager"
+          },
+          {
+            "name": "Osama Saleh",
+            "title": "Finance Manager"
+          },
+          {
+            "name": "Abdullah Al Hajri",
+            "title": "Maintenance Manager"
+          },
+          {
+            "name": "Abdullah Al Qahtani",
+            "title": "CFO"
+          },
+          {
+            "name": "Zafir Ullah Khan",
+            "title": "Project Manager"
+          }
+        ]
+      }
+    ]
+  },
+  "HSE": {
+    "name": "Mohsin Raza",
+    "title": "HSE Manager",
+    "children": [
+      {
+        "name": "Zahir Ghafoor",
+        "title": "Dy Manager HSE",
+        "children": [
+          {
+            "title": "Safety Officer"
+          },
+          {
+            "title": "Safety Officer"
+          },
+          {
+            "title": "Safety Officer"
+          },
+          {
+            "title": "Safety Officer"
+          }
+        ]
+      },
+      {
+        "name": "Work Permit Receivers (WPR)",
+        "title": 12
+      },
+      {
+        "name": "Azeem Sarwar",
+        "title": "HSE Supervisro",
+        "children": [
+          {
+            "title": "Safety Officer"
+          },
+          {
+            "title": "Safety Officer"
+          },
+          {
+            "title": "Safety Officer"
+          },
+          {
+            "title": "Safety Officer"
+          }
+        ]
+      }
+    ]
+  },
+  "qualityControl": {
+    "name": "Mohammed Sajid",
+    "title": "QC Manager",
+    "children": [
+      {
+        "name": "Sohail Iqbal ",
+        "title": "Dy Manager QC",
+        "children": [
+          {
+            "title": "QC Inspector"
+          },
+          {
+            "title": "QC Inspector"
+          },
+          {
+            "title": "QC Inspector"
+          },
+          {
+            "title": "QC Inspector"
+          }
+        ]
+      },
+      {
+        "name": "Ahmed Naseem",
+        "title": "QC Supervisor",
+        "children": [
+          {
+            "title": "QC Inspector"
+          },
+          {
+            "title": "QC Inspector"
+          },
+          {
+            "title": "QC Inspector"
+          },
+          {
+            "title": "QC Inspector"
+          }
+        ]
+      }
+    ]
+  }
+}

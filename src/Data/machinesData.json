@@ -1,0 +1,15 @@
+{
+  "ownedMachinesData": [
+    { "description": "Concrete Mixers (Truck 8 m3)", "quantity": 1 },
+    { "description": "Water Tankers", "quantity": 4 },
+    { "description": "Asphalt Cutters", "quantity": 2 },
+    { "description": "Roller", "quantity": 4 },
+    { "description": "Loader", "quantity": 8 },
+    { "description": "Forklift (1, 3 Tons)", "quantity": 2 },
+    { "description": "Trailers (Dumpers, Low Bed, Standard)", "quantity": 40 },
+    { "description": "Small Cars", "quantity": 12 },
+    { "description": "Pick Ups", "quantity": 22 },
+    { "description": "Dyna Trucks", "quantity": 6 },
+    { "description": "Buses", "quantity": 2 }
+  ]
+}
