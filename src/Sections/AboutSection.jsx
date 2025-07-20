@@ -46,12 +46,12 @@ export default function AboutSection() {
         boxes,
         {
           opacity: 0,
-          y: 100,
+          y: 200,
+
         },
         {
           opacity: 1,
           y: 0,
-          // delay: index * .2,
           duration: .6,
           stagger: .2,
           ease: "none",
@@ -122,7 +122,7 @@ export default function AboutSection() {
 
         <div
           ref={scrollRef}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:px-32"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:px-32 overflow-y-hidden"
         >
           {sections.map((section, index) => (
             <NavLink
