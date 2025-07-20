@@ -1,12 +1,9 @@
-// imgs
 import introductionBg from "/AboutPages/gsp-introduction/introduction.webp";
 import informationBg from "/AboutPages/gsp-information/bgImg.webp";
 import chartBg from "/AboutPages/organizational-chart/bgImg.webp";
 import manPowerBg from "/GalleryPage/37.webp";
 import ownedMachinesBg from "/AboutPages/owned-machines/img.webp";
 import financialStatusBg from "/AboutPages/financial-status/financial-status.webp";
-
-// ######
 
 import {
   BarChart2,
@@ -21,45 +18,14 @@ import { cn } from "../lib/utils";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutSection() {
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
-
   const scrollRef = useRef();
-  useGSAP(() => {
-    const boxes = gsap.utils.toArray(scrollRef.current.children);
-
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: scrollRef.current,
-          start: "top 85%",
-           end: "center 49%",
-            toggleActions: "play none none reverse",
-        },
-      })
-      .fromTo(
-        boxes,
-        {
-          opacity: 0,
-          y: 200,
-
-        },
-        {
-          opacity: 1,
-          y: 0,
-          duration: .6,
-          stagger: .2,
-          ease: "none",
-        }
-      );
-
-
-  }, []);
 
   const sections = [
     {
@@ -100,6 +66,45 @@ export default function AboutSection() {
     },
   ];
 
+  // ✅ تحميل الصور مسبقًا لتقليل lag
+  useEffect(() => {
+    sections.forEach((section) => {
+      const img = new Image();
+      img.src = section.bgImg;
+    });
+  }, []);
+
+  useGSAP(() => {
+    const boxes = gsap.utils.toArray(scrollRef.current.children);
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: scrollRef.current,
+          start: "top 85%",
+          end: "center 49%",
+          toggleActions: "play none none reverse",
+          lazy: false,
+        },
+      })
+      .fromTo(
+        boxes,
+        {
+          opacity: 0,
+          y: "200px",
+          willChange: "opacity, transform",
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.2,
+          ease: "power2.out",
+          clearProps: "willChange",
+        }
+      );
+  }, []);
+
   return (
     <section className="py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-4 text-center">
@@ -133,7 +138,7 @@ export default function AboutSection() {
                 "shadow-md shadow-primary/70",
                 "relative overflow-hidden",
                 "group",
-                "will-change-transform"
+                "will-change-transform content-visibility: auto"
               )}
             >
               <div className="img-box h-full relative">
