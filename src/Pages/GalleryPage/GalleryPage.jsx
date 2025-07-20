@@ -30,12 +30,12 @@ export default function GalleryPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 overflow-y-hidden">
             {galleryImages.map((src, index) => (
               <PhotoView key={index} src={src}>
-                <div className="relative group rounded-lg overflow-hidden shadow-md shadow-primary h-full border border-primary cursor-pointer">
+                <div className="relative group rounded-lg overflow-hidden shadow-md aspect-[4/3] shadow-primary border border-primary cursor-pointer">
                   <img
                     src={src}
                     alt={`Gallery ${index + 1}`}
                     loading="lazy"
-                    className=" cursor-pointer transition-transform h-full duration-500 group-hover:scale-125"
+                    className=" cursor-pointer w-full h-full object-cover transition-transform duration-500 group-hover:scale-125"
                   />
                   <div
                     className={cn(
