@@ -25,7 +25,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function AboutSection() {
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
-  const scrollRef = useRef();
+  const scrollRef = useRef(null);
 
   const sections = [
     {
@@ -66,11 +66,24 @@ export default function AboutSection() {
     },
   ];
 
-  // ✅ تحميل الصور مسبقًا لتقليل lag
   useEffect(() => {
     sections.forEach((section) => {
       const img = new Image();
       img.src = section.bgImg;
+    });
+  }, []);
+
+  useGSAP(() => {
+    gsap.from([titleRef.current, subtitleRef.current], {
+      y: "100px",
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: titleRef.current,
+        start: "top 90%",
+      },
     });
   }, []);
 
@@ -84,20 +97,26 @@ export default function AboutSection() {
           start: "top 85%",
           end: "center 49%",
           toggleActions: "play none none reverse",
-          lazy: false,
         },
       })
       .fromTo(
         boxes,
         {
+          scale: 0.1,
+          rotation: 45,
           opacity: 0,
-          y: "200px",
+          duration: 0.5,
+          stagger: 0.2,
+          ease: "power2.out",
+          y: "300px",
           willChange: "opacity, transform",
         },
         {
+          scale: 1,
+          rotation: 0,
           opacity: 1,
           y: 0,
-          duration: 0.6,
+          duration: 0.5,
           stagger: 0.2,
           ease: "power2.out",
           clearProps: "willChange",
@@ -149,7 +168,7 @@ export default function AboutSection() {
                     "group-hover:scale-125 transition-all duration-300"
                   )}
                   src={section.bgImg}
-                  alt=""
+                  alt={section.to}
                 />
                 <div
                   className={cn(
