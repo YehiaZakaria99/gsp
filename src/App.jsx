@@ -20,6 +20,7 @@ import OwnedMachines from "./Pages/AboutPages/OwnedMachines";
 import FinancialStatus from "./Pages/AboutPages/FinancialStatus";
 import LeadershipPage from "./Pages/AboutPages/LeadershipPage";
 import GalleryContextProvider from "./Context/GalleryContext";
+import OurEquipments from "./Pages/AboutPages/OurEquipments";
 
 function App() {
   const routers = createBrowserRouter([
@@ -33,6 +34,7 @@ function App() {
           element: <AboutPage />,
           children: [
             { path: "/about/leadership", element: <LeadershipPage /> },
+            { path: "/about/our-equipments", element: <OurEquipments /> },
             { path: "/about/introduction", element: <GSPIntroduction /> },
             { path: "/about/information", element: <GSPInformation /> },
             {

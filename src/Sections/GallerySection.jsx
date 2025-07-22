@@ -48,7 +48,7 @@ export default function GallerySection() {
       let pointerEvents = "none";
 
       if (pos === 0) {
-        // المركز
+        // Center
         x = 0;
         scale = 1;
         rotateZ = 0;
@@ -57,7 +57,7 @@ export default function GallerySection() {
         blur = "0px";
         pointerEvents = "auto";
       } else if (pos === 1) {
-        // يمين
+        // Right
         x = 120;
         scale = 0.9;
         rotateZ = -10;
@@ -66,7 +66,7 @@ export default function GallerySection() {
         blur = "2px";
         pointerEvents = "auto";
       } else if (pos === total - 1) {
-        // يسار
+        // Left
         x = -120;
         scale = 0.9;
         rotateZ = 10;

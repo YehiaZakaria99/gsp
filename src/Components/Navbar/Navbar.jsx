@@ -30,6 +30,7 @@ export default function Navbar() {
       to: "about",
       aboutList: [
         { name: "Leadership", to: "/about/leadership" },
+        { name: "Our Equipments", to: "/about/our-equipments" },
         { name: "Introduction", to: "/about/introduction" },
         { name: "Information", to: "/about/information" },
         { name: "Organizational Chart", to: "/about/organizational-chart" },
