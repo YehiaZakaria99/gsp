@@ -15,9 +15,9 @@ import { useEffect } from "react";
 const { financialData } = financialStatusData;
 
 export default function FinancialStatus() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   const label = Object.entries(financialData[0]).filter(
     ([key, value]) => typeof value == "number"
   );

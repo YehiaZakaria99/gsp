@@ -1,16 +1,18 @@
 import Slider from "react-slick";
 // images
 import mainImg from "/AboutPages/gsp-introduction/introduction.webp";
-import pipeImg from "/GalleryPage/36.webp";;
-import teamImg from "/GalleryPage/37.webp";;
+import pipeImg from "/GalleryPage/36.webp";
+import teamImg from "/GalleryPage/37.webp";
 import img3 from "/GalleryPage/25.webp";
 import img4 from "/GalleryPage/17.webp";
 import { useEffect } from "react";
+import { cn } from "../../../lib/utils";
+import IntroCard from "../../../Components/IntroCard/IntroCard";
 
 export default function GSPIntroduction() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   const introData = [
     {
       img: pipeImg,
@@ -36,31 +38,14 @@ export default function GSPIntroduction() {
     },
   ];
 
-  const settings = {
-    dots: true,
-    arrows: false,
-    infinite: true,
-    speed: 1000,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    waitForAnimate: false,
-    pauseOnHover: true,
-    fade: true,
-    cssEase: "ease-in-out",
-    beforeChange: () => {
-      if (document.activeElement && document.activeElement.blur) {
-        document.activeElement.blur();
-      }
-    },
-  };
-
   return (
     <section className="introduction bg-white py-20 ">
       {/* Title + Image */}
-      <div
-        className="relative px-6 md:px-16 py-10 mb-20 flex flex-col-reverse md:flex-row items-center gap-10 bg-cover h-[300px] md:h-[450px] lg:h-[500px] md:bg-fixed bg-bottom  shadow-xl overflow-hidden"
+      <section
+        className={cn(
+          "relative px-6 md:px-16 py-10 mb-20 flex flex-col-reverse md:flex-row items-center gap-10 bg-cover h-[300px] md:h-[450px] lg:h-[500px] md:bg-fixed bg-bottom  shadow-xl overflow-hidden",
+          "header"
+        )}
         style={{ backgroundImage: `url(${mainImg})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-hover/30 to-primary/80 z-10" />
@@ -73,31 +58,11 @@ export default function GSPIntroduction() {
             excellence.
           </p>
         </div>
-      </div>
-
-      {/* Slider Section */}
-      <div className="px-6 md:px-16">
-        <Slider
-          {...settings}
-          className="space-y-4 rounded-2xl border-t-4 border-primary bg-white shadow-sm shadow-primary "
-        >
-          {introData.map(({ h2, p, img }, key) => (
-            <div key={key} className="">
-              <div className="transition-all duration-1000 ease-in-out px-4 py-8   flex flex-col md:flex-row items-center gap-6">
-                <img
-                  loading="lazy"
-                  src={img}
-                  alt="GSP Slide"
-                  className="w-full md:w-[400px] h-[250px] rounded-xl shadow-lg object-cover"
-                />
-                <div className="text-primary text-lg leading-relaxed font-semibold">
-                  <p className="whitespace-pre-line  xl:w-[700px]">{p}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
+      </section>
+      {/* Animated Cards */}
+      {introData.map(({ p, img }, key) => (
+        <IntroCard key={`k${key}`} p={p} img={img} i={key} />
+      ))}
     </section>
   );
 }

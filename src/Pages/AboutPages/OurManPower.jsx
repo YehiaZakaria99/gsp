@@ -27,9 +27,9 @@ const COLORS = [
 ];
 
 export default function OurManPower() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   let total = 0;
   function calcTotal() {
     manpowerData.forEach((man) => (total += +man.total));

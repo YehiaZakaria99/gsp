@@ -4,9 +4,9 @@ import chairmanImg from "/AboutPages/LeadershipPage/owner.webp";
 import { useEffect } from "react";
 
 export default function LeadershipPage() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   return (
     <>
       <section className="leadership-page py-20 bg-primary/20 ">

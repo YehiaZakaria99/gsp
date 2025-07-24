@@ -8,9 +8,6 @@ import { cn } from "../../lib/utils";
 
 export default function GalleryPage() {
   const { galleryImages } = useContext(galleryContext);
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <section className="bg-primary/20 py-20">
       {/* Header */}

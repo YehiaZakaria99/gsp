@@ -27,9 +27,9 @@ const COLORS = [
 ];
 
 export default function OwnedMachines() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   const topMachines = ownedMachinesData
     .sort((a, b) => b.quantity - a.quantity)
     .slice(0, 6);

@@ -9,9 +9,9 @@ import { useEffect } from "react";
 const { infoData } = informationData;
 
 export default function GSPInformation() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   return (
     <section className="bg-primary/20 py-20">
       {/* Header */}

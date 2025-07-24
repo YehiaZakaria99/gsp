@@ -4,9 +4,6 @@ import bgImg from "/ContactPage/bgImg.webp";
 import { cn } from "../../lib/utils";
 
 export default function ContactPage() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <section className="bg-primary/10 text-primary">

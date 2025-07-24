@@ -12,7 +12,6 @@ import OurExperiencePage from "./Pages/OurExperiencePages/OurExperiencePage";
 import GalleryPage from "./Pages/GalleryPage/GalleryPage";
 import ContactPage from "./Pages/ContactPage/ContactPage";
 import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
-import GSPIntroduction from "./Pages/AboutPages/GSPIntroduction";
 import GSPInformation from "./Pages/AboutPages/GSPInformation";
 import OrganizationalChart from "./Pages/AboutPages/OrganizationalChart";
 import OurManPower from "./Pages/AboutPages/OurManPower";
@@ -21,8 +20,10 @@ import FinancialStatus from "./Pages/AboutPages/FinancialStatus";
 import LeadershipPage from "./Pages/AboutPages/LeadershipPage";
 import GalleryContextProvider from "./Context/GalleryContext";
 import OurEquipments from "./Pages/AboutPages/OurEquipments";
+import GSPIntroduction from "./Pages/AboutPages/GSPIntroduction/GSPIntroduction";
 
 function App() {
+
   const routers = createBrowserRouter([
     {
       path: "",
@@ -63,6 +64,7 @@ function App() {
   ]);
   return (
     <>
+    
       <RouterProvider router={routers} />
     </>
   );

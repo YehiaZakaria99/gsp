@@ -9,12 +9,18 @@ import electricalImg from "/GalleryPage/34.webp";
 import technicalImg from "/GalleryPage/32.webp";
 
 import { cn } from "../../lib/utils";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
+import { useLocation } from "react-router";
 
 export default function OurSolutionsPage() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  //   const { pathname } = useLocation();
+
+  // useLayoutEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [pathname]);
+
+
+
   const solutions = [
     {
       id: 0,

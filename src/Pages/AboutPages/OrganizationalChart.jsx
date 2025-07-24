@@ -9,9 +9,9 @@ import HsE from "./../../Components/OrganizationalComponents/HsE";
 import QualityControl from "../../Components/OrganizationalComponents/QualityControl";
 
 export default function OrganizationalChart() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   const [isMobile, setIsMobile] = useState(false);
 
   const [headManagement, HSE, qualityControl] = Object.entries(chartData).map(
