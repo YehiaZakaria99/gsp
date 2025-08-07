@@ -103,7 +103,7 @@ export default function WhyChooseUs() {
             </HTMLFlipBook>
           </div>
 
-          <div className="text-center">
+          {/* <div className="text-center">
             <button
               className={cn(
                 "mt-6 inline-block text-md px-4 py-2 rounded-md",
@@ -113,7 +113,7 @@ export default function WhyChooseUs() {
             >
               More Details
             </button>
-          </div>
+          </div> */}
         </div>
 
         {/* Right: Why Choose Us */}

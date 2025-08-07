@@ -48,7 +48,7 @@ function App() {
           ],
         },
         { path: "ourSolutions", element: <OurSolutionsPage /> },
-        { path: "ourExperience", element: <OurExperiencePage /> },
+        // { path: "ourExperience", element: <OurExperiencePage /> },
         {
           path: "gallery",
           element: (
@@ -64,7 +64,6 @@ function App() {
   ]);
   return (
     <>
-    
       <RouterProvider router={routers} />
     </>
   );

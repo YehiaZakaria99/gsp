@@ -84,7 +84,6 @@ export default function HeroSection() {
                   </h2>
               </div>
 
-              {/* Scroll Button */}
             </div>
           </div>
         ))}

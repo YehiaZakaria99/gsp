@@ -40,7 +40,7 @@ export default function Navbar() {
       ],
     },
     { name: "Our Solutions", to: "ourSolutions" },
-    { name: "Our Experience", to: "ourExperience" },
+    // { name: "Our Experience", to: "ourExperience" },
     { name: "Gallery", to: "gallery" },
     { name: "Contact", to: "contact" },
   ];
